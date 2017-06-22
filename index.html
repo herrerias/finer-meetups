@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- Introduction -->
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Bootstrap
+							###### ¿Qué es Bootstrap?
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							¿Qué es Bootstrap?
+							* Es un framework CSS para el desarrollo sencillo y rápido de aplicaciones web.
+							* **Mobile First**, el objetivo son los dispositivos móviles y escala dependiendo del tamaño de la pantalla.
+ 							* Surge de empleados de Twitter que tenían la necesidad de estandarizar los componentes de front de la compañía (sentido común :grin:)
+							HTML5 + JS + CSS3
+							                        -> B
+							GLYPHICONS
+						</textarea>
+					</section>
+				</section>
+
+				<!-- Why and Why NOT -->
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Bootstrap
+							###### <span style="color:#c3c3c3;">¿Por qué usar Bootstrap?</span>
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							* La **curva de aprendizaje** es muy baja
+							* **Velocidad** de desarrollo
+							* Componentes comunes y con **buenas prácticas**
+							* **Compatibilidad** con todos los navegadores (casi todos)
+							* **Responsive**
+							* El sistema de **grids** marca un antes y un después :smile:
+							* **Preprocesadores** CSS (Saas en la versión 4)
+							* Gran **comunidad** de desarrollo detrás
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							## Bootstrap
+							###### <span style="color:#c3c3c3;">¿Por qué NO usar Bootstrap?</span>
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							* Tiene **valores por defecto** que al inicio son tediosos de cambiar.
+							* Tu diseño siempre tiene que adaptarse al **grid de 12 columnas**
+							* **Añadir componentes que no existen**. En CSS y cuidando el diseño responsive.
+							* Sin cambio en el diseño inicial **TODOS LOS SITES PARECEN IGUALES**
+						</textarea>
+					</section>
+				</section>
+
+				<!-- Getting started -->
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							## Bootstrap
+							###### <span style="color:#c3c3c3;">Getting started</span>
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							* Versión actual v3.3.7 (luego comentamos algo de la 4)
+							* http://getbootstrap.com/getting-started/
+							* Descargar los ficheros CSS, JavaScript y fuentes ya compilados y ¿*minificados*?
+							```
+							bootstrap/
+								├── css/
+								│   ├── bootstrap.css
+								│   ├── bootstrap.css.map
+								│   ├── bootstrap.min.css
+								│   ├── bootstrap.min.css.map
+								│   ├── bootstrap-theme.css
+								│   ├── bootstrap-theme.css.map
+								│   ├── bootstrap-theme.min.css
+								│   └── bootstrap-theme.min.css.map
+								├── js/
+								│   ├── bootstrap.js
+								│   └── bootstrap.min.js
+								└── fonts/
+									├── glyphicons-halflings-regular.eot
+									├── glyphicons-halflings-regular.svg
+									├── glyphicons-halflings-regular.ttf
+									├── glyphicons-halflings-regular.woff
+									└── glyphicons-halflings-regular.woff2
+							```
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							* Instalar la dependencia en tu proyecto
+							```
+							$ bower install bootstrap
+							```
+							```
+							$ npm install bootstrap@3
+							```
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							###### Bootstrap CDN links
+							Si no quieres descargar directamente en tu proyecto el framework se puede incluir desde Bootstrap CDN (Content Delivery Network)
+							* CSS Completo
+							```
+							https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+							```
+							* JavaScript Completo
+							```
+							https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
+							```
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							# DEMO
+						</textarea>
+					</section>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+						<!-- .slide: data-background="#ff0000" -->
+						Markdown content
+					</script>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						## Page title
+
+							A paragraph with some text and a [link](http://hakim.se).
+
+						### Page title
+
+					</textarea>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
