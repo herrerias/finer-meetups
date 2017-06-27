@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/beige.css">
+		<link rel="stylesheet" href="css/theme/meetup.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -28,22 +29,22 @@
 				<!-- Introduction -->
 
 				<section>
-					<section data-markdown>
-						<textarea data-template>
-							## Bootstrap
-							###### ¿Qué es Bootstrap?
-						</textarea>
+					<section>
+						<h1>Bootstrap</h1>
+						<p>
+							<span class="subtitle">¿Qué es Bootstrap?</span>
+						</p>
 					</section>
 
 					<section data-markdown>
 						<textarea data-template>
-							¿Qué es Bootstrap?
+							<h2>¿Qué es Bootstrap?</h2>
+
 							* Es un framework CSS para el desarrollo sencillo y rápido de aplicaciones web.
 							* **Mobile First**, el objetivo son los dispositivos móviles y escala dependiendo del tamaño de la pantalla.
  							* Surge de empleados de Twitter que tenían la necesidad de estandarizar los componentes de front de la compañía (sentido común :grin:)
-							HTML5 + JS + CSS3
-							                        -> B
-							GLYPHICONS
+
+							<img src="img/bootstrap_components.png" alt="HTML5+CSS3+JS+GLYPHICONS -> BOOTSTRAP" class="plain"/>
 						</textarea>
 					</section>
 				</section>
@@ -53,13 +54,18 @@
 				<section>
 					<section data-markdown>
 						<textarea data-template>
-							## Bootstrap
-							###### <span style="color:#c3c3c3;">¿Por qué usar Bootstrap?</span>
+							<h1>Bootstrap</h1>
+							<p>
+								<span class="subtitle">¿Por qué usar Bootstrap?</span>
+							</p>
 						</textarea>
 					</section>
 
 					<section data-markdown>
 						<textarea data-template>
+							<!-- .slide: data-background="#c5e1a5" -->
+							<h2>¿Por qué usar Bootstrap?</h2>
+
 							* La **curva de aprendizaje** es muy baja
 							* **Velocidad** de desarrollo
 							* Componentes comunes y con **buenas prácticas**
@@ -68,22 +74,30 @@
 							* El sistema de **grids** marca un antes y un después :smile:
 							* **Preprocesadores** CSS (Saas en la versión 4)
 							* Gran **comunidad** de desarrollo detrás
+
 						</textarea>
 					</section>
 
 					<section data-markdown>
 						<textarea data-template>
-							## Bootstrap
-							###### <span style="color:#c3c3c3;">¿Por qué NO usar Bootstrap?</span>
+
+							<h1>Bootstrap</h1>
+							<p>
+								<span class="subtitle">¿Por qué NO usar Bootstrap?</span>
+							</p>
 						</textarea>
 					</section>
 
 					<section data-markdown>
 						<textarea data-template>
+							<!-- .slide: data-background="#ef9a9a" -->
+							<h2>¿Por qué NO usar Bootstrap?</h2>
+
 							* Tiene **valores por defecto** que al inicio son tediosos de cambiar.
 							* Tu diseño siempre tiene que adaptarse al **grid de 12 columnas**
 							* **Añadir componentes que no existen**. En CSS y cuidando el diseño responsive.
 							* Sin cambio en el diseño inicial **TODOS LOS SITES PARECEN IGUALES**
+
 						</textarea>
 					</section>
 				</section>
@@ -93,13 +107,16 @@
 				<section>
 					<section data-markdown>
 						<textarea data-template>
-							## Bootstrap
-							###### <span style="color:#c3c3c3;">Getting started</span>
+							<h1>Bootstrap</h1>
+							<p>
+								<span class="subtitle">Getting started</span>
+							</p>
 						</textarea>
 					</section>
 
 					<section data-markdown>
 						<textarea data-template>
+							<h2>Descargando el código fuente</h2>
 							* Versión actual v3.3.7 (luego comentamos algo de la 4)
 							* http://getbootstrap.com/getting-started/
 							* Descargar los ficheros CSS, JavaScript y fuentes ya compilados y ¿*minificados*?
@@ -129,7 +146,8 @@
 
 					<section data-markdown>
 						<textarea data-template>
-							* Instalar la dependencia en tu proyecto
+							<h2>Instalando la dependencia en tu proyecto</h2>
+
 							```
 							$ bower install bootstrap
 							```
@@ -141,13 +159,13 @@
 
 					<section data-markdown>
 						<textarea data-template>
-							###### Bootstrap CDN links
+							<h2>Bootstrap CDN links</h2>
 							Si no quieres descargar directamente en tu proyecto el framework se puede incluir desde Bootstrap CDN (Content Delivery Network)
-							* CSS Completo
+							<p>CSS Completo</p>
 							```
 							https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
 							```
-							* JavaScript Completo
+							<p>JavaScript Completo</p>
 							```
 							https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
 							```
@@ -156,27 +174,129 @@
 
 					<section data-markdown>
 						<textarea data-template>
-							# DEMO
+							<h2>DEMO</h2>
 						</textarea>
 					</section>
 				</section>
 
+				<!-- GRID -->
 
-				<section data-markdown>
-					<script type="text/template">
-						<!-- .slide: data-background="#ff0000" -->
-						Markdown content
-					</script>
-				</section>
-				<section data-markdown>
-					<textarea data-template>
-						## Page title
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							<h1>Bootstrap</h1>
+							<p>
+								<span class="subtitle">Grid System</span>
+							</p>
+						</textarea>
+					</section>
 
-							A paragraph with some text and a [link](http://hakim.se).
+					<section data-markdown>
+						<textarea data-template>
+							<h2>Grid System</h2>
+							* http://getbootstrap.com/css/#grid
+							* Incluye un **sistema de rejilla responsive y mobile first de 12 columnas**
+							* Nos permite mantener **orden**, **proporción** y **composición**. Establecer un **Layout**
+							<img src="img/grid.png" class="plain"/>
+						</textarea>
+					</section>
 
-						### Page title
+					<section data-markdown>
+						<textarea data-template>
+							<h2>Row</h2>
+							* Se debe colocar .row dentro de un .container(ancho fijo) o .container-fluid (ancho completo)
+							* Se utiliza .row para crear grupos horizontales
+							* El contenido se debe colocar entre .row y deben de ser hijos inmediatos
+							```
+							<div class="row">
+								<!-- Columnas del grid que formarán el layout -->
+							</div>
+							```
+						</textarea>
+					</section>
 
-					</textarea>
+					<section data-markdown>
+						<textarea data-template>
+							<h2>Column</h2>
+							* Son creadas especificando el tamaño de la columna. La suma de todas tiene que ser 12.
+							* Si hay más de 12 columnas en una .row, esta son desplazadas abajo
+							```
+							<div class="row">
+								<div class="col-md-4">.col-md-4</div>
+								<div class="col-md-4">.col-md-4</div>
+								<div class="col-md-4">.col-md-4</div>
+							</div>
+							```
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							<h2>Multidispositivo</h2>
+							* 1 columna para xs (<768px)
+							* 2 columnas para sm (≥768px)
+							* 3 columnas para md (≥992px)
+							* 4 columnas para lg (≥1200px)
+							```
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">1</div>
+								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">2</div>
+								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">3</div>
+								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">4</div>
+							</div>
+							```
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							<h2>Clearfix</h2>
+							* Problema cuando una capa tiene un alto mayor que la de los demás
+							<img width="450" src="img/clearfix.png" class="plain"/>
+
+							```
+							<div class="row">
+								<div class="...">1Resize your viewport</div>
+								<div class="...">2</div>
+								<div class="clearfix visible-sm-block"></div>
+								<div class="...">3</div>
+								<div class="clearfix visible-md-block"></div>
+								<div class="...">4</div>
+							</div>
+							```
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							<h2>Huecos con Offset</h2>
+
+							<img src="img/offset.png" class="plain"/>
+
+							```
+							<div class="row">
+								<div class="col-md-4">.col-md-4</div>
+								<div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+							</div>
+							```
+						</textarea>
+					</section>
+
+					<section>
+						<p>
+							<img width="650" src="img/grid-example.png" class="plain"/>
+						</p>
+						<p class="fragment fade-in">
+							<img width="650" src="img/grid-example-marked.png" class="plain"/>
+						</p>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							<h2>DEMO</h2>
+						</textarea>
+					</section>
+
 				</section>
 			</div>
 		</div>
