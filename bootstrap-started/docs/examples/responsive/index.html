@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Responsive utilities for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="responsive.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.5.0/introjs.min.css"/>
+
+  </head>
+
+  <body>
+
+  <div class="container">
+    <div class="responsive-template">
+        <h2>Test cases for responsive utilities</h2>
+
+        <p>La idea es ir cambiando el tamaño del navegador y ver cómo responde el layout en función de nuestras clases.</p>
+
+        <section>
+          <h3>Visible en los dispositivos... (en verde se muestra lo que es <string>visible</string> en el <i>viewport</i> actual:</h3>
+
+          <div class="row responsive-utilities-test visible-on">
+            <div class="col-xs-6 col-sm-3"> <span class="hidden-xs">Extra small<br>
+                <code>hidden-xs</code></span> <span class="visible-xs">✔ Visible on x-small<br>
+                <code>visible-xs</code></span> </div>
+            <div class="col-xs-6 col-sm-3"> <span class="hidden-sm">Small<br>
+                <code>hidden-sm</code></span> <span class="visible-sm">✔ Visible on small<br>
+                <code>visible-sm</code></span> </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-3"> <span class="hidden-md">Medium<br>
+                <code>hidden-md</code></span> <span class="visible-md">✔ Visible on medium<br>
+                <code>visible-md</code></span> </div>
+            <div class="col-xs-6 col-sm-3"> <span class="hidden-lg">Large<br>
+                <code>hidden-lg</code></span> <span class="visible-lg">✔ Visible on large<br>
+                <code>visible-lg</code></span> </div>
+          </div>
+
+          <div class="row responsive-utilities-test visible-on">
+            <div class="col-xs-6 col-sm-6"> <span class="hidden-xs hidden-sm">Extra small and small<br>
+                <code>hidden-xs hidden-sm</code></span> <span class="visible-xs visible-sm">✔ Visible on x-small and small<br>
+                <code>visible-xs visible-sm</code></span> </div>
+            <div class="col-xs-6 col-sm-6"> <span class="hidden-md hidden-lg">Medium and large<br>
+                <code>hidden-md hidden-lg</code></span> <span class="visible-md visible-lg">✔ Visible on medium and large<br>
+                <code>visible-md visible-lg</code></span> </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-6"> <span class="hidden-xs hidden-md">Extra small and medium<br>
+                <code>hidden-xs hidden-md</code></span> <span class="visible-xs visible-md">✔ Visible on x-small and medium<br>
+                <code>visible-xs visible-md</code></span> </div>
+            <div class="col-xs-6 col-sm-6"> <span class="hidden-sm hidden-lg">Small and large<br>
+                <code>hidden-sm hidden-lg</code></span> <span class="visible-sm visible-lg">✔ Visible on small and large<br>
+                <code>visible-sm visible-lg</code></span> </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-xs-6 col-sm-6"> <span class="hidden-xs hidden-lg">Extra small and large<br>
+                <code>hidden-xs hidden-lg</code></span> <span class="visible-xs visible-lg">✔ Visible on x-small and large<br>
+                <code>visible-xs visible-lg</code></span> </div>
+            <div class="col-xs-6 col-sm-6"> <span class="hidden-sm hidden-md">Small and medium<br>
+                <code>hidden-sm hidden-md</code></span> <span class="visible-sm visible-md">✔ Visible on small and medium<br>
+                <code>visible-sm visible-md</code></span> </div>
+          </div>
+        </section>
+
+      <section>
+        <h3>Oculto en los dispositivos... (en verde se muestra lo que está <strong>oculto</strong> en el <i>viewport</i> actual:</h3>
+
+        <div class="row responsive-utilities-test hidden-on">
+          <div class="col-xs-6 col-sm-3"> <span class="hidden-xs">Extra small<br>
+                <code>hidden-xs</code></span> <span class="visible-xs">✔ Hidden on x-small<br>
+                <code>visible-xs</code></span> </div>
+          <div class="col-xs-6 col-sm-3"> <span class="hidden-sm">Small<br>
+                <code>hidden-sm</code></span> <span class="visible-sm">✔ Hidden on small<br>
+                <code>visible-sm</code></span> </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-xs-6 col-sm-3"> <span class="hidden-md">Medium<br>
+                <code>hidden-md</code></span> <span class="visible-md">✔ Hidden on medium<br>
+                <code>visible-md</code></span> </div>
+          <div class="col-xs-6 col-sm-3"> <span class="hidden-lg">Large<br>
+                <code>hidden-lg</code></span> <span class="visible-lg">✔ Hidden on large<br>
+                <code>visible-lg</code></span> </div>
+        </div>
+
+        <div class="row responsive-utilities-test hidden-on">
+          <div class="col-xs-6 col-sm-6"> <span class="hidden-xs hidden-sm">Extra small and small<br>
+                <code>hidden-xs hidden-sm</code></span> <span class="visible-xs visible-sm">✔ Hidden on x-small and small<br>
+                <code>visible-xs visible-sm</code></span> </div>
+          <div class="col-xs-6 col-sm-6"> <span class="hidden-md hidden-lg">Medium and large<br>
+                <code>hidden-md hidden-lg</code></span> <span class="visible-md visible-lg">✔ Hidden on medium and large<br>
+                <code>visible-md visible-lg</code></span> </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-xs-6 col-sm-6"> <span class="hidden-xs hidden-md">Extra small and medium<br>
+                <code>hidden-xs hidden-md</code></span> <span class="visible-xs visible-md">✔ Hidden on x-small and medium<br>
+                <code>visible-xs visible-md</code></span> </div>
+          <div class="col-xs-6 col-sm-6"> <span class="hidden-sm hidden-lg">Small and large<br>
+                <code>hidden-sm hidden-lg</code></span> <span class="visible-sm visible-lg">✔ Hidden on small and large<br>
+                <code>visible-sm visible-lg</code></span> </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-xs-6 col-sm-6"> <span class="hidden-xs hidden-lg">Extra small and large<br>
+                <code>hidden-xs hidden-lg</code></span> <span class="visible-xs visible-lg">✔ Hidden on x-small and large<br>
+                <code>visible-xs visible-lg</code></span> </div>
+          <div class="col-xs-6 col-sm-6"> <span class="hidden-sm hidden-md">Small and medium<br>
+                <code>hidden-sm hidden-md</code></span> <span class="visible-sm visible-md">✔ Hidden on small and medium<br>
+                <code>visible-sm visible-md</code></span> </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <p>
+        <a href="../theme/index.html">Siguiente Tema</a>
+      </p>
+
+    </div>
+  </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+  </body>
+</html>

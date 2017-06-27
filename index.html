@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Finer meetups - Introducción a Bootstrap</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/beige.css">
@@ -42,7 +42,7 @@
 
 							* Es un framework CSS para el desarrollo sencillo y rápido de aplicaciones web.
 							* **Mobile First**, el objetivo son los dispositivos móviles y escala dependiendo del tamaño de la pantalla.
- 							* Surge de empleados de Twitter que tenían la necesidad de estandarizar los componentes de front de la compañía (sentido común :grin:)
+ 							* Surge de empleados de Twitter que tenían la necesidad de estandarizar los componentes de front de la compañía (sentido común :) )
 
 							<img src="img/bootstrap_components.png" alt="HTML5+CSS3+JS+GLYPHICONS -> BOOTSTRAP" class="plain"/>
 						</textarea>
@@ -71,7 +71,7 @@
 							* Componentes comunes y con **buenas prácticas**
 							* **Compatibilidad** con todos los navegadores (casi todos)
 							* **Responsive**
-							* El sistema de **grids** marca un antes y un después :smile:
+							* El sistema de **grids** marca un antes y un después O_o!!
 							* **Preprocesadores** CSS (Saas en la versión 4)
 							* Gran **comunidad** de desarrollo detrás
 
@@ -162,11 +162,11 @@
 							<h2>Bootstrap CDN links</h2>
 							Si no quieres descargar directamente en tu proyecto el framework se puede incluir desde Bootstrap CDN (Content Delivery Network)
 							<p>CSS Completo</p>
-							```
+							```html
 							https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
 							```
 							<p>JavaScript Completo</p>
-							```
+							```html
 							https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
 							```
 						</textarea>
@@ -203,11 +203,33 @@
 
 					<section data-markdown>
 						<textarea data-template>
+							<h3>Anchura total de la página con Bootstrap: ¿100% o limitada?</h3>
+							* Hacer una página RESPONSIVE no quiere decir que ocupe el 100% de la anchura de toda la pantalla
+							* De hecho, nos podemos encontrar con las siguientes posibilidades:
+								* Utilizar una anchura limitada (nada rebasa esa anchura)
+							```html
+							<div class=”container”> aquí nuestros contenidos acotados en anchura </div>
+							```
+								* Utilizar el 100% de la anchura del monitor para todo el contenido
+							```html
+							<div class=”container-fluid”> aquí nuestros contenidos al 100% de página </div>
+							```
+								* Utilizar el 100% de la anchura pero el fondo ocupando el 100% y contenido acotado
+							```html
+							<div class=”container-fluid”>
+								<div class=”container”> aquí nuestros contenidos </div>
+							</div>
+							```
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
 							<h2>Row</h2>
 							* Se debe colocar .row dentro de un .container(ancho fijo) o .container-fluid (ancho completo)
 							* Se utiliza .row para crear grupos horizontales
 							* El contenido se debe colocar entre .row y deben de ser hijos inmediatos
-							```
+							```html
 							<div class="row">
 								<!-- Columnas del grid que formarán el layout -->
 							</div>
@@ -220,7 +242,7 @@
 							<h2>Column</h2>
 							* Son creadas especificando el tamaño de la columna. La suma de todas tiene que ser 12.
 							* Si hay más de 12 columnas en una .row, esta son desplazadas abajo
-							```
+							```html
 							<div class="row">
 								<div class="col-md-4">.col-md-4</div>
 								<div class="col-md-4">.col-md-4</div>
@@ -232,19 +254,33 @@
 
 					<section data-markdown>
 						<textarea data-template>
-							<h2>Multidispositivo</h2>
-							* 1 columna para xs (<768px)
-							* 2 columnas para sm (≥768px)
-							* 3 columnas para md (≥992px)
-							* 4 columnas para lg (≥1200px)
-							```
-							<div class="row">
-								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">1</div>
-								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">2</div>
-								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">3</div>
-								<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">4</div>
+							<h2>Multidispositivo (ejemplo)</h2>
+							* Resolución **lg (≥1200px)**: queremos 4 bloques en fila. como son 12 columnas, 4 columnas de tamaño 3
+							* Resolución **md (≥992px)**: queremos 3 bloques por fila: como son 12 columnas, 3 columnas de tamaño 4
+							* Resolución **sm (≥768px)**: queremos 2 bloques por fila: como hay 12 columnas, 2 columnas de tamaño 6
+							* Resolución **xs (<768px)**: queremos 1 bloque por fila: 1 columna de tamaño 12.
+							```html
+							<div class=”row”>
+								<div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> nuestro bloque </div>
+								<div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> nuestro bloque </div>
+								<div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> nuestro bloque </div>
+								<div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> nuestro bloque </div>
 							</div>
 							```
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							```html
+							<div class=”row”>
+								<div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> nuestro bloque </div>
+								<div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> nuestro bloque </div>
+								<div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> nuestro bloque </div>
+								<div class=”col-lg-3 col-md-4 col-sm-6 col-xs-12″> nuestro bloque </div>
+							</div>
+							```
+							<img height="490" src="img/bootstrap-grid-3-4-6-1.png" class="plain"/>
 						</textarea>
 					</section>
 
@@ -254,7 +290,7 @@
 							* Problema cuando una capa tiene un alto mayor que la de los demás
 							<img width="450" src="img/clearfix.png" class="plain"/>
 
-							```
+							```html
 							<div class="row">
 								<div class="...">1Resize your viewport</div>
 								<div class="...">2</div>
@@ -273,7 +309,7 @@
 
 							<img src="img/offset.png" class="plain"/>
 
-							```
+							```html
 							<div class="row">
 								<div class="col-md-4">.col-md-4</div>
 								<div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
@@ -298,6 +334,34 @@
 					</section>
 
 				</section>
+
+				<!-- Responsive utilities -->
+
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+							<h1>Bootstrap</h1>
+							<p>
+								<span class="subtitle">Responsive utilities</span>
+							</p>
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							<h2>Responsive utilities</h2>
+							* Para un desarrollo más rápido "mobile-friendly", Bootstrap nos proporciona clases para mostrar u ocultar componentes en función del dispositivo
+							<img src="img/responsive-utilities.png" class="plain"/>
+						</textarea>
+					</section>
+
+					<section data-markdown>
+						<textarea data-template>
+							<h2>DEMO</h2>
+						</textarea>
+					</section>
+				</section>
+
 			</div>
 		</div>
 
